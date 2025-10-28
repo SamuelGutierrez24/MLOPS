@@ -1,7 +1,7 @@
 # Servicio de diagnóstico (reglas simples)
 
 Este repositorio contiene una pequeña aplicación de ejemplo (Flask) que expone una función determinística
-de "diagnóstico" médico para propósitos educativos y de taller. No hay entrenamiento de modelos ML reales —
+de "diagnóstico" médico para propósitos educativos. No hay entrenamiento de modelos ML reales —
 la función `simple_diagnosis` es una regla demostrativa que devuelve uno de los siguientes estados:
 
 - `NO ENFERMO`

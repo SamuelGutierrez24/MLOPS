@@ -40,7 +40,7 @@ Construir una solución que, dada una entrada clínica (síntomas, signos, prueb
 3. **ETL y calidad**: limpieza, unificación de unidades, imputación, validación de esquema.
 4. **Feature store**: almacenamiento de features reproducibles (Feast u otro).
 5. **Exploratory Data Analysis (EDA)** y generación de cohortes.
-6. **Preprocesamiento / augmentación** (incluye técnicas específicas para rarezas).
+6. **Preprocesamiento** (incluye técnicas específicas para rarezas).
 7. **Entrenamiento**: pipelines reproducibles (CI para modelos), experiment tracking (MLflow).
 8. **Validación clínica**: pruebas offline + revisión por expertos.
 9. **Registro de modelos** (model registry).
@@ -106,6 +106,11 @@ Construir una solución que, dada una entrada clínica (síntomas, signos, prueb
   * Pipeline orquestado con Airflow for retraining and ETL.
   * Model registry (MLflow, DVC) + CI/CD para modelos (tests automáticos).
 
+### **Despliegue CI/CD:**
+
+* Despliegue del contenedor en el servicio de cloud (AWS, AZURE, GOOGLE CLOUD) o servidor de la clinica requerido.
+* Entrega del servicio del modelo predictivo  
+
 
 ### **Monitoreo**
 
@@ -129,7 +134,7 @@ Construir una solución que, dada una entrada clínica (síntomas, signos, prueb
 
   * Audit logs, inputs y outputs, versión exacta del modelo.
 
-### **Retraining y CI/CD**
+### **Retraining**
 
 * **Triggers para retraining**:
 
@@ -138,13 +143,8 @@ Construir una solución que, dada una entrada clínica (síntomas, signos, prueb
 
   * Retraining automático con validación humana semi-automática para Enfermedades huérfanas (human-in-the-loop).
   * Mantener dataset incremental y políticas de retención/refresh.
-* **Testing previo a producción**:
-
-  * Canary releases, shadow testing, A/B testing con evaluación clínica.
-* **Despliegue CI/CD:**
-
-    * Despliegue del contenedor en el servicio de cloud (AWS, AZURE, GOOGLE CLOUD) o servidor de la clinica requerido   
+ 
 
 ---
 
-![alt text](Diagrama-tipo-cloud.png)
+![alt text](Diagrama-pipeline.png)
