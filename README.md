@@ -1,4 +1,4 @@
-# Servicio de diagnóstico (reglas simples)
+# Servicio de diagnóstico
 
 Este repositorio contiene una pequeña aplicación de ejemplo (Flask) que expone una función determinística
 de "diagnóstico" médico para propósitos educativos. No hay entrenamiento de modelos ML reales —
